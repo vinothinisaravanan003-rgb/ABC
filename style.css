@@ -1,0 +1,165 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background-color: #f8dcd5;
+    background-image:
+        radial-gradient(#ffffff55 1px, transparent 1px);
+    background-size: 12px 12px;
+    text-align: center;
+}
+
+/* Header */
+
+header {
+    padding: 30px 15px;
+}
+
+header h1 {
+    color: #674b62;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #795c70;
+    font-size: 17px;
+}
+
+/* Alphabet Gallery */
+
+.gallery {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
+
+/* Cards */
+
+.card {
+    background-color: white;
+    border: 2px solid #d4c5bd;
+    box-shadow: 0 3px 8px #77777780;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 18px #55555555;
+}
+
+/* Picture area */
+
+.picture {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    background-color: white;
+}
+
+/* Alphabet area */
+
+.letter {
+    padding: 5px;
+    background-color: #ffaaa5;
+}
+
+.letter h5 {
+    color: white;
+    font-size: 38px;
+    font-weight: normal;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.letter h5:hover {
+    transform: scale(1.1);
+}
+
+/* Different pastel backgrounds */
+
+.card:nth-child(5n+1) .letter {
+    background-color: #ffaaa5;
+}
+
+.card:nth-child(5n+2) .letter {
+    background-color: #ffdfc4;
+}
+
+.card:nth-child(5n+3) .letter {
+    background-color: #e2efce;
+}
+
+.card:nth-child(5n+4) .letter {
+    background-color: #b1e5d7;
+}
+
+.card:nth-child(5n) .letter {
+    background-color: #c3cce8;
+}
+
+/* Heading colours for assessment */
+
+.card h3 {
+    color: green;
+    font-size: 14px;
+    padding: 8px 2px;
+}
+
+.card:nth-child(1) h3,
+.card:nth-child(2) h3,
+.card:nth-child(3) h3 {
+    color: blue;
+}
+
+.card:nth-child(4) h3 {
+    color: red;
+}
+
+/* Footer */
+
+footer {
+    padding: 25px;
+    color: #674b62;
+    font-size: 16px;
+}
+
+/* Responsive design */
+
+@media (max-width: 650px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .picture {
+        height: 75px;
+        font-size: 32px;
+    }
+
+    .letter h5 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 380px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
